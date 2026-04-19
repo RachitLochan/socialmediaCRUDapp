@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block  title %}
+editd layout for tweet
+{% endblock  %}
+{% block  content %}
+<h1 class="text_center mt-4">
+    sure you wanna  delete?
+</h1>
+<form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">DeLete</button>
+    <a class="btn btn-success" href="{% url 'tweet_list'%}"> 10 rupee pencil </a>
+</form>
+{% endblock  %}
